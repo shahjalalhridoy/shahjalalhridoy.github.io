@@ -26,7 +26,7 @@
                     <div class="header-avatar">
                         <img src="media/first-screen/pp.jpg" alt="">
                     </div>
-                    <span class="point" style="font-family: Bradley Hand ITC, Helvetica, sans-serif; font-size: 32px;">Shah Jalal Hridoy</span>
+                    <span class="point" style="font-family: Bradley Hand ITC, Helvetica, sans-serif; font-size: 32px; padding-left:55px;">Shah Jalal Hridoy</span>
                 </a>
             </div>
             <div class="col-md-9 text-right hidden-sm hidden-xs">
@@ -409,11 +409,13 @@
 </footer>
 
 <!-- Modal about me -->
+
 <div class="modal fade" id="about-me-modal" tabindex="-1" role="dialog" aria-labelledby="about-me-modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="about-me">
+                <!-- <div id="print"> -->
                     <div class="about-title">
                         <h3>About me</h3>
                     </div>
@@ -512,47 +514,16 @@
     </div>
 
 </div>
-<!--                 <div class="resume-box">
-    <div class="resume-title">
-        <h4>Education</h4>
-    </div>
-    <div class="resume-desc opacity-box">
-        <p>All my life I have been driven by my strong belief that education
-            is important. I try to learn something new every single day.</p>
-    </div>
-    <div class="resume-info">
-        <div class="resume-info-title">
-            <h5>Product Design Course @ Google & Udacity</h5>
-        </div>
-        <div class="resume-info-desc opacity-box">
-            <p>DProduct Design blends theory and practice to teach product validation, UI/UX
-                practices, Google’s Design Sprint and the process for setting and tracking
-                actionable metrics.</p>
-        </div>
-        <div class="resume-date opacity-box">
-            <p>April, 2015 — May, 2015</p>
-        </div>
-    </div>
-    <div class="resume-info">
-        <div class="resume-info-title">
-            <h5>Graphic Design @ Boston University</h5>
-        </div>
-        <div class="resume-info-desc opacity-box">
-            <p>BSc (Hons) in Graphic Design. Outstanding Academic Achievement Award.</p>
-        </div>
-        <div class="resume-date opacity-box">
-            <p>January, 2005 — May, 2009</p>
-        </div>
-    </div>
-</div> -->
                 <div class="modal-buttons">
                     <a class="site-btn btn-theme-blue" href="#"  data-dismiss="modal" data-toggle="modal" data-target="#contact-me-modal">Contact me</a>
+                   <!--  <a class="btn btn-info" onclick="printContent('print')" style="color:white;  margin-bottom: 20px;">Print</a>  -->
                     <!-- <a class="site-btn btn-theme-blue-tr" href="#" data-dismiss="modal" aria-hidden="true">Back to cv</a> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Modal about me -->
 
 <!-- Modal contact me -->
@@ -686,6 +657,15 @@
 
 <!--THEME-->
 <script src="js/theme.js"></script>
+<script>
+  function printContent(el){
+    var restorepage = document.body.innerHTML;
+    var printcontent = document.getElementById(el).innerHTML;
+    document.body.innerHTML = printcontent;
+    window.print();
+    document.body.innerHTML = restorepage;
+  }
+</script>
 </body>
 
 <!-- Mirrored from previews.aspirity.com/richard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Jul 2017 09:27:09 GMT -->
